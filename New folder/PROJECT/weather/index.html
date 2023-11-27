@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<style>
+     /* Style for the round button */
+     .round-button {
+            width: 70px;
+            height: 50px;
+            background-color: #0e0329; /* Change the background color as desired */
+            border-radius: 10%;
+            border: none;
+            color: #fff; /* Text color */
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        /* Glowing effect when hovering over the button */
+        .round-button:hover {
+            animation: glowing 1s infinite;
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Adjust the shadow color as desired */
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            }
+        }
+</style>
+<body>
+    <!--<button class="round-button" onclick="window.location.href='welcome.php'">BACK</button>-->
+
+    <div class="container">
+
+        <div class="search-box">
+            <i class='bx bx-map'></i>
+                <input type="text" placeholder="Enter your location">
+                <button class="bx bx-search">֎</button>
+           
+        </div>
+
+        <div class="weather-box">
+            <div class="box">
+                <div class="info weather">
+                    <div class="weather">
+                        <img src="image/cloud.png" alt="֎">
+                        <p class="temperature">0<span>°C</span></p>
+                        <p class="description">Broken Clouds</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class='bx bx-water'></i>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span>0%</span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class='bx bx-wind'></i>
+                <div class="text">
+                    <div class="info-wind">
+                        <span>0 km/h</span>
+                    </div>
+                    <p>Wind speed</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="not-found">
+            <div class="box">
+                <img src="image/404.png" alt="֎">
+                <p>֎:Location not found</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
